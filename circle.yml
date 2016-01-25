@@ -13,7 +13,6 @@ dependencies:
     - elixir_version=$(awk '/elixir/ { print $2 }' .tool-versions) && asdf install elixir ${elixir_version}
     - mix local.hex --force
     - mix local.rebar --force
-    - echo "FUNK"; echo $NOTIFICATION_URL
     - yes | mix deps.get
 test:
   override:
