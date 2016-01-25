@@ -1,0 +1,2 @@
+defmodule SlackerGit do
+end
