@@ -10,6 +10,6 @@ defmodule SlackerGit.Commands.Ref do
   end
 
   defp get_reference do
-    System.get_env("GIT_REF")
+    Application.get_env(:slacker, :git_ref) || "<no-ref>"
   end
 end

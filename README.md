@@ -1,6 +1,6 @@
 # SlackerGit
 
-A command for [slacker](https://github.com/mikfreedman/slacker) that will return the value of the system environment variable `$GIT_ENV`
+A command for [slacker](https://github.com/mikfreedman/slacker) that will return the value of the system configuration key `git_ref`
 
 ## Installation
 
@@ -12,8 +12,11 @@ config :slacker,
   slack_api_token: System.get_env("SLACK_API_TOKEN"),
   parsers: [Slacker.Parsers.Prefix],
   allow_direct_messages: false,
-  commands: [SlackerGit.Commands.Ref]
+  commands: [SlackerGit.Commands.Ref],
+  git_ref: System.get_env("GIT_REF")
 ```
+
+set `git_ref` in any way that is appropriate for your deployment
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
