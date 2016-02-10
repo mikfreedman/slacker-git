@@ -28,7 +28,7 @@ defmodule SlackerGit.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:slacker, git: "https://github.com/mikfreedman/slacker.git"}
+      {:slacker, git: "https://github.com/pivotal-sydney/slacker.git"}
     ]
   end
 end
